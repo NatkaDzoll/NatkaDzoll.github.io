@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>React JS</title>
+</head>
+<body>
+<div id="app">
+ 
+</div>
+<script src="../react-0.14.3/build/react.js"></script>
+<script src="../react-0.14.3/build/react-dom.js"></script>
+<script>
+
+var MyComponent = React.createClass({
+	/*спецификация*/
+	propTypes: {
+		name: React.PropTypes.string.isRequired,
+	},
+	render: function () {
+		return React.DOM.span(null, "My name is " + this.props.name)
+	}
+});
+
+ReactDOM.render(
+	React.createElement(MyComponent, {
+		//name: "Natka",
+	}), document.getElementById('app'));
+
+
+	/*ReactDOM.render(
+	React.DOM.h1({
+		id: "my-heading",
+		className: "pretty",
+		style: {
+			background: "black",
+			color: "white",
+			fontFamily: "Veranda"}
+		},
+		React.DOM.span(null, "Hello Word!"),
+		),
+	document.getElementById("app")
+	); 
+	var Component = React.createClass({
+		
+	})*/
+</script>
+</body>
+</html>
